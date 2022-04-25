@@ -54,7 +54,18 @@
                                 </li>
                             @endif
                         @else
+
                             <li class="nav-item dropdown">
+
+                                @php
+                                    if( env('APP_ENV') !== 'production' ){
+                                        $branch = trim(shell_exec('git rev-parse --abbrev-ref HEAD'));
+                                        print "<li class='nav-link'>Branch:
+                                                    <span class='alert alert-warning p-1'>{$branch}</span>
+                                               </li>";
+                                    }
+                                @endphp
+
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>

@@ -1,0 +1,42 @@
+inicio as 15:40
+
+convite curso gratuito de laravel 8 relacionamento
+[YouTube] Instalando o Laravel 8
+[YouTube] configuracao
+[YouTube] versionamento projeto laravel e armazenamento
+[YouTube] laravel relacionamento one to one
+
+20/April
+[YouTube] laravel relacionamento one to one
+[YouTube] laravel relacionamento one to many (e inverso)
+
+
+21/04
+
+https://github.com/lucascudo/laravel-pt-BR-localization
+
+php artisan make:request StoreUpdateProductRequest
+
+migrar as tabelas
+php artisan migrate
+
+mostrar os comandos
+ - php artisan
+
+criar o model
+php artisan make:model Product -m
+
+
+λ php artisan make:factory ProductFactory --model=Product
+
+criar o seeder para chamar o factory
+php artisan make:seeder ProductsTableSeeder
+
+rodar uma unica seeder
+php artisan db:seed --class=ProductsTableSeeder
+
+
+[https://www.kreaweb.be/laravel-8-bootstrap-5/]
+npm install bootstrap@latest bootstrap-icons @popperjs/core --save-dev
+
+https://icons.getbootstrap.com/

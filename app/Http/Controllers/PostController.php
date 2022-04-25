@@ -98,9 +98,11 @@ class PostController extends Controller
      * @param \App\Models\Post $post
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreUpdatePost $request, Post $post)
+    public function update(StoreUpdatePost $request, $id)
     {
-        //if (!$post) redirect()->back();
+        if (!$post = Post::find($id)) {
+            return redirect()->back();
+        }
 
         $data = $request->all();
 
